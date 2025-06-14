@@ -5,11 +5,13 @@ pipeline {
         }
     }
 
+
     stages {
-        stage('Hello') {
+        stage('git clone') {
             steps {
-                echo 'Hello World'
+                git branch: 'mian', url: 'https://github.com/devopssteps/java-2025.git'
             }
         }
     }
 }
+

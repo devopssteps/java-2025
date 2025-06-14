@@ -1,1 +1,1 @@
-# java-2025
+# java-webiste-only
