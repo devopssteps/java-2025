@@ -31,6 +31,12 @@ pipeline {
                 sh 'docker push devopssteps/myapp:latest'
             }
         }
+        stage('deploy to k8s') {
+            steps {
+                sh './k8s/deploy.sh'
+                sh 'kubectl rollout restart deployment.apps/myapp-deployment'
+            }
+        }
     }
 }
 
