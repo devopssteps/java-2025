@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('git clone') {
             steps {
-                git branch: 'mian', url: 'https://github.com/devopssteps/java-2025.git'
+                git branch: 'main', url: 'https://github.com/devopssteps/java-2025.git'
             }
         }
     }
