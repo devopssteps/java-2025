@@ -19,6 +19,11 @@ pipeline {
                 sh 'mvn clean deploy'
             }
         }
+        stage('docker image build') {
+            steps {
+                sh 'docker build -t devopssteps/myapp:latest .'
+            }
+        }
     }
 }
 
